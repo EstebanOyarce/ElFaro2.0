@@ -1,0 +1,174 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>El Faro - Deportes</title>  
+    <!-- Vincula la tipografía de Google Fonts -->  
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">  
+    <link rel="stylesheet" href="styles.css"> <!-- Vinculación del archivo CSS externo -->  
+</head>  
+
+<body>
+
+    <header>
+        <h1>El Faro - Deportes</h1>
+        <p>Las últimas noticias del mundo deportivo</p>
+        <img src="C:\Users\esteb\OneDrive\Escritorio\Sitio web\public\images\logo.png" alt="Logotipo de El Faro" width="100">
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="deporte.html">Deporte</a>
+        <a href="negocios.html">Negocios</a>
+    </nav>
+
+    <main>
+        <h2>Últimas Noticias</h2>
+
+        <div class="article">  
+            <h3>El Real Madrid gana la Champions</h3>  
+            <p><strong>Categoría:</strong> Fútbol</p>  
+            <p>El Real Madrid se coronó campeón de la UEFA Champions League 2023/24 tras vencer al Borussia Dortmund por 2-0 en la final disputada en el estadio de Wembley el 1 de junio de 2024. 
+                Este título marcó su 15ª Copa de Europa, consolidando su posición como el club más exitoso en la historia del torneo.</p>
+            <img src="C:\Users\esteb\OneDrive\Escritorio\Sitio web\public\images\Real_Madrid.jpg" alt="Imagen del Real Madrid ganador" style="width:100%; height:auto; margin-bottom: 1rem;">
+        </div>  
+        
+        <div class="article">  
+            <h3>Juegos Olímpicos 2024: Lo que debes saber</h3>  
+            <p><strong>Categoría:</strong> Olimpiadas</p>  
+            <p>Los Juegos Olímpicos de París 2024 se llevaron a cabo del 26 de julio al 11 de agosto de 2024, con competencias en 35 sedes repartidas por toda la ciudad y sus alrededores. La Villa 
+                Olímpica ofreció a los atletas una experiencia única, con instalaciones modernas y diversas comodidades. La ceremonia de apertura se realizó el 26 de julio, destacando la rica cultura 
+                francesa y el espíritu olímpico.</p>  
+            <img src="C:\Users\esteb\OneDrive\Escritorio\Sitio web\public\images\Juegos_Olimpicos.avif" alt="Imagen de las Olimpiadas París 2024"style="width:100%; height:auto; margin-bottom: 1rem;">
+        </div>  
+
+        <div class="article">  
+            <h3>Nueva marca mundial en atletismo</h3>  
+            <p><strong>Categoría:</strong> Atletismo</p>  
+            <p>En 2024, se establecieron 20 nuevos récords mundiales en atletismo, algunos de los cuales tenían casi 40 años de antigüedad. Atletas como Mondo Duplantis y Sydney McLaughlin-Levrone 
+                fueron protagonistas de estos logros, demostrando el continuo avance y la competitividad en el deporte.</p>  
+            <img src="C:\Users\esteb\OneDrive\Escritorio\Sitio web\public\images\Atleta.jpg" alt="Imagen de Mondo Duplantis" style="width:100%; height:auto; margin-bottom: 1rem;">
+        </div>  
+    </main>
+
+    <footer>
+        <p>&copy; 2025 El Faro.</p>
+    </footer>
+
+    <style>  
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem; /* Espacio entre artículos */
+        }
+
+        .article {
+            display: block;
+            width: 100%;
+        }
+
+        /* Definición de la fuente personalizada */  
+        @font-face {  
+            font-family: 'Roboto';  
+            src: url('Fuente/Ubuntu-Bold.ttf') format('truetype'); /* Reemplaza con tu archivo */  
+        }  
+
+        /* Estilos globales */  
+        body {  
+            font-family: 'Roboto', sans-serif; /* Aplica la fuente */  
+            background-color: #f5f5f5; /* Fondo gris */  
+            margin: 0;  
+            padding: 0;  
+        }  
+
+        /* Estilos del encabezado */  
+        header {  
+            background-color: #004080; /* Color de fondo del header */  
+            color: white; /* Color de texto */  
+            text-align: center; /* Centra el texto */  
+            padding: 20px; /* Espaciado interno */  
+        }  
+
+        /* Estilos del menú de navegación */  
+        nav {  
+            background-color: #333; /* Color de fondo del nav */  
+            text-align: center; /* Centra el contenido */  
+            padding: 10px; /* Espaciado interno */  
+        }  
+
+        nav a {  
+            color: white; /* Color de los enlaces */  
+            text-decoration: underline; /* Subrayado por defecto */  
+            padding: 10px 20px; /* Espaciado interno */  
+            display: inline-block; /* Alineación en línea */  
+        }  
+
+        nav a:hover {  
+            background-color: #575757; /* Color de fondo al pasar el mouse */  
+            font-weight: bold; /* Texto en negrita al hacer hover */  
+            text-decoration: none; /* Quita subrayado al hacer hover */  
+        }  
+
+        /* Estilos del área principal */  
+        main {  
+            padding: 20px; /* Espaciado interno */  
+            display: flex; /* Usando Flexbox para disposición */  
+            flex-wrap: wrap; /* Permite que los elementos se ajusten */  
+            justify-content: space-between; /* Espaciado entre items */  
+        }  
+
+        /* Estilos para los bloques de artículos */  
+        .article {  
+            background-color: white; /* Color de fondo blanco para los artículos */  
+            margin: 15px; /* Margen entre artículos */  
+            padding: 15px; /* Espaciado interno */  
+            border-radius: 8px; /* Bordes redondeados */  
+            flex: 1 0 30%; /* Artículos ocupan el 30% del ancho */  
+            transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */  
+        }  
+
+        /* Efecto hover para artículos */  
+        .article:hover {  
+            background-color: black; /* Fondo negro al pasar el mouse */  
+            color: white; /* Texto blanco al pasar el mouse */  
+        }  
+
+        /* Estilos del pie de página */  
+        footer {  
+            background-color: #c9d2d0; /* Color de fondo del footer */  
+            color: #31231e; /* Color de texto del footer */  
+            text-align: center; /* Centra el texto */  
+            padding: 10px; /* Espaciado interno */  
+            margin-top: 20px; /* Margen superior */  
+        }  
+
+        /* Responsividad usando media queries */  
+        @media (max-width: 768px) {  
+            .article {  
+                flex: 1 0 100%; /* Bloques de artículos ocupan toda la columna en pantallas pequeñas */  
+            }  
+        }  
+
+        /* Estilo para enlaces */  
+        nav a {  
+            transition: none; /* Sin transición por defecto */  
+        }  
+
+        /* Aero estilos para enlaces en el footer */  
+        footer a {  
+            color: inherit; /* Hereda el color del texto */  
+            text-decoration: underline; /* Subrayado por defecto */  
+        }  
+
+        footer a:hover {  
+            text-decoration: none; /* Quita el subrayado al pasar el mouse */  
+            font-weight: bold; /* Negrita al hacer hover */  
+        }  
+    </style>  
+
+</body>
+</html>

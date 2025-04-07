@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>  
+        <meta charset="UTF-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>El Faro - Negocios</title>  
+        <!-- Vincula la tipografía de Google Fonts -->  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">  
+        <link rel="stylesheet" href="styles.css"> <!-- Vinculación del archivo CSS externo -->  
+    </head>  
+
+<body>
+
+    <header>
+        <h1>El Faro - Negocios</h1>
+        <p>Las últimas noticias del mundo empresarial</p>
+        <img src="logo.png" alt="Logotipo de El Faro" width="100">
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="deporte.html">Deporte</a>
+        <a href="negocios.html">Negocios</a>
+    </nav>
+
+    <main>
+        <h2>Últimas Noticias</h2>
+
+        <div class="article">  
+            <h3>Startup chilena revoluciona la energía solar</h3>  
+            <p><strong>Categoría:</strong> Emprendimiento</p>  
+            <p>CleanLight, una innovadora startup chilena, ha transformado el sector de las energías renovables al desarrollar torres solares portátiles que integran iluminación, comunicaciones y vigilancia. 
+                Estas soluciones, que combinan tecnología avanzada con inteligencia artificial, buscan hacer la energía solar más accesible y eficiente.</p>
+            <p>La empresa ha expandido sus operaciones internacionalmente, inaugurando una oficina en Miami con el objetivo de introducir sus productos en el mercado latinoamericano. Durante 2021, CleanLight 
+                reportó ventas por 5,3 millones de dólares, reflejando su rápido crecimiento y aceptación en el mercado.</p>
+            <p>Además, CleanLight ha recibido inversiones significativas, incluyendo 1,8 millones de euros por parte del grupo energético portugués EDP, marcando su primera inversión en una startup 
+                latinoamericana fuera de Brasil.</p>
+            <img src="C:\Users\esteb\OneDrive\Escritorio\Sitio web\public\images\Clean_Light.jpg" alt="Imagen de CleanLight" style="width:100%; height:auto; margin-bottom: 1rem;">
+        </div>  
+        
+        <div class="article">  
+            <h3>La Bolsa de Santiago cierra al alza</h3>  
+            <p><strong>Categoría:</strong> Finanzas</p>  
+            <p>La Bolsa de Comercio de Santiago registró un incremento del 0,27% en su principal indicador, el IPSA, alcanzando un cierre histórico por encima de los 7.700 puntos. Este logro se produjo a pesar 
+                de las caídas globales provocadas por las nuevas medidas arancelarias implementadas por Estados Unidos.</p>  
+            <p>Este desempeño positivo se atribuye al sólido rendimiento de sectores clave, como el bancario y el minorista. Acciones de entidades financieras como Banco de Chile y Santander, así como de minoristas, contribuyeron al alza del mercado. ​
+                Reuters</p>  
+            <img src="C:\Users\esteb\OneDrive\Escritorio\Sitio web\public\images\Bolsa_Comercio.jpg" alt="Imagen de la Bolsade Comercio"  style="width:100%; height:auto; margin-bottom: 1rem;">
+        </div>  
+
+        <div class="article">  
+            <h3>Nueva ley favorece a PYMES</h3>  
+            <p><strong>Categoría:</strong> Economía</p>  
+            <p>El gobierno chileno ha implementado una nueva ley destinada a combatir la evasión fiscal, conocida como Ley Antielusión. Esta legislación incrementa la fiscalización y exige a las empresas 
+                justificar sus operaciones de manera más transparente. Aunque su objetivo principal es asegurar el cumplimiento tributario, también tiene implicancias para las pequeñas y medianas empresas 
+                (PYMES), que deberán adaptarse a los nuevos requerimientos para evitar sanciones.</p> 
+            <p>Además, se han introducido medidas específicas para apoyar a las PYMES, como convenios de pago con la Tesorería General de la República (TGR) por hasta 18 meses, sin intereses ni multas, 
+                y con un pie máximo del 5% de la deuda. Estas iniciativas buscan aliviar la carga financiera de las PYMES y fomentar su crecimiento y formalización.</p>  
+            <img src="C:\Users\esteb\OneDrive\Escritorio\Sitio web\public\images\Apoyo_PYMES.jpg" alt="Imagen de Reunión PYMES" style="width:100%; height:auto; margin-bottom: 1rem;">
+        </div>  
+    </main>
+
+    <footer>
+        <p>&copy; 2025 El Faro</p>
+    </footer>
+
+    <style>  
+
+        main {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem; /* Espacio entre artículos */
+        }
+
+        .article {
+            display: block;
+            width: 100%;
+        }
+
+        /* Definición de la fuente personalizada */  
+        @font-face {  
+            font-family: 'Roboto';  
+            src: url('Fuente/Ubuntu-Bold.ttf') format('truetype'); /* Reemplaza con tu archivo */  
+        }  
+
+        /* Estilos globales */  
+        body {  
+            font-family: 'Roboto', sans-serif; /* Aplica la fuente */  
+            background-color: #f5f5f5; /* Fondo gris */  
+            margin: 0;  
+            padding: 0;  
+        }  
+
+        /* Estilos del encabezado */  
+        header {  
+            background-color: #004080; /* Color de fondo del header */  
+            color: white; /* Color de texto */  
+            text-align: center; /* Centra el texto */  
+            padding: 20px; /* Espaciado interno */  
+        }  
+
+        /* Estilos del menú de navegación */  
+        nav {  
+            background-color: #333; /* Color de fondo del nav */  
+            text-align: center; /* Centra el contenido */  
+            padding: 10px; /* Espaciado interno */  
+        }  
+
+        nav a {  
+            color: white; /* Color de los enlaces */  
+            text-decoration: underline; /* Subrayado por defecto */  
+            padding: 10px 20px; /* Espaciado interno */  
+            display: inline-block; /* Alineación en línea */  
+        }  
+
+        nav a:hover {  
+            background-color: #575757; /* Color de fondo al pasar el mouse */  
+            font-weight: bold; /* Texto en negrita al hacer hover */  
+            text-decoration: none; /* Quita subrayado al hacer hover */  
+        }  
+
+        /* Estilos del área principal */  
+        main {  
+            padding: 20px; /* Espaciado interno */  
+            display: flex; /* Usando Flexbox para disposición */  
+            flex-wrap: wrap; /* Permite que los elementos se ajusten */  
+            justify-content: space-between; /* Espaciado entre items */  
+        }  
+
+        /* Estilos para los bloques de artículos */  
+        .article {  
+            background-color: white; /* Color de fondo blanco para los artículos */  
+            margin: 15px; /* Margen entre artículos */  
+            padding: 15px; /* Espaciado interno */  
+            border-radius: 8px; /* Bordes redondeados */  
+            flex: 1 0 30%; /* Artículos ocupan el 30% del ancho */  
+            transition: background-color 0.3s ease, color 0.3s ease; /* Transición suave */  
+        }  
+
+        /* Efecto hover para artículos */  
+        .article:hover {  
+            background-color: black; /* Fondo negro al pasar el mouse */  
+            color: white; /* Texto blanco al pasar el mouse */  
+        }  
+
+        /* Estilos del pie de página */  
+        footer {  
+            background-color: #c9d2d0; /* Color de fondo del footer */  
+            color: #31231e; /* Color de texto del footer */  
+            text-align: center; /* Centra el texto */  
+            padding: 10px; /* Espaciado interno */  
+            margin-top: 20px; /* Margen superior */  
+        }  
+
+        /* Responsividad usando media queries */  
+        @media (max-width: 768px) {  
+            .article {  
+                flex: 1 0 100%; /* Bloques de artículos ocupan toda la columna en pantallas pequeñas */  
+            }  
+        }  
+
+        /* Estilo para enlaces */  
+        nav a {  
+            transition: none; /* Sin transición por defecto */  
+        }  
+
+        /* Aero estilos para enlaces en el footer */  
+        footer a {  
+            color: inherit; /* Hereda el color del texto */  
+            text-decoration: underline; /* Subrayado por defecto */  
+        }  
+
+        footer a:hover {  
+            text-decoration: none; /* Quita el subrayado al pasar el mouse */  
+            font-weight: bold; /* Negrita al hacer hover */  
+        }  
+    </style>  
+
+</body>
+</html>
