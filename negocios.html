@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>  
+        <meta charset="UTF-8">  
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <title>El Faro - Negocios</title>
+        <link rel="stylesheet" href="styles.css">  
+        <script src="script.js"></script> 
+    </head>  
+
+<body>
+
+    <header>
+        <h1>El Faro - Negocios</h1>
+        <p>Las últimas noticias del mundo empresarial</p>
+        <img src="logo.png" alt="Logotipo de El Faro" width="100">
+        <p id="fecha-hora"></p> 
+    </header>
+
+    <nav>
+        <a href="index.html">Inicio</a>
+        <a href="deporte.html">Deporte</a>
+        <a href="negocios.html">Negocios</a>
+    </nav>
+
+    <main>
+        
+        <section id="contador-articulos">
+            <h3>Resumen de artículos</h3>
+            <p>Total de artículos en el sitio: <span id="total-articulos">0</span></p>
+            <p>Artículos en esta categoría: <span id="categoria-articulos">0</span></p>
+        </section>
+
+        <h2>Últimas Noticias de Negocios</h2>
+
+        <section id="nuevo-articulo">
+            <h3>Agregar nuevo artículo</h3>
+            <form id="formulario-articulo">
+                <label for="titulo">Título:</label>
+                <input type="text" id="titulo" placeholder="Ingrese el título" required>
+                
+                <label for="descripcion">Descripción:</label>
+                <textarea id="descripcion" placeholder="Ingrese la descripción" required></textarea>
+                
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" required>
+                    <option value="index.html">Noticias Recientes</option>
+                    <option value="deporte.html">Deportes</option>
+                    <option value="negocios.html">Negocios</option>
+                </select>
+
+                <button type="submit">Agregar Artículo</button>
+            </form>
+        </section>
+        
+        <h3>Artículos Publicados</h3>
+        <div id="contenedor-articulos">
+
+        </div> 
+
+    </main>
+
+    <section id="contacto">
+        <h3>Contacto</h3>
+        <form id="formulario-contacto">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre" required>
+    
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" placeholder="Escriba su mensaje aquí" required></textarea>
+    
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+    
+    <div id="mensaje-confirmacion" style="display: none; color: green;">
+        <p>¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 El Faro</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const contenedorArticulos = document.getElementById("contenedor-articulos");
+            const categoria = window.location.pathname.split("/").pop(); // Obtiene el nombre del archivo actual
+    
+            const articulosGuardados = JSON.parse(localStorage.getItem(categoria)) || [];
+    
+            articulosGuardados.forEach(articulo => {
+                const nuevoArticulo = document.createElement("div");
+                nuevoArticulo.classList.add("article");
+    
+                const tituloElemento = document.createElement("h3");
+                tituloElemento.textContent = articulo.titulo;
+    
+                const descripcionElemento = document.createElement("p");
+                descripcionElemento.innerHTML = articulo.descripcion.replace(/\n/g, "<br>");
+    
+                nuevoArticulo.appendChild(tituloElemento);
+                nuevoArticulo.appendChild(descripcionElemento);
+                contenedorArticulos.appendChild(nuevoArticulo);
+            });
+        });
+    </script>
+
+</body>
+</html>
